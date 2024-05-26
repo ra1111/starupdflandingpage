@@ -1,0 +1,200 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto; /* Ensures the scroll bar is always visible */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.app {
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh; /* Ensures the app takes at least the full viewport height */
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center top;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.background-gif {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 0;
+}
+
+.background {
+  z-index: -3;
+}
+
+.background-animated {
+  z-index: -1;
+  left: 50px;
+  top:25%;
+}
+
+.background-overlay {
+  z-index: -1;
+  left: 80%;
+  top:10%;
+}
+
+.hero {
+  background-color: transparent;
+  padding: 50px;
+  position: relative;
+  z-index: 3;
+  width: 90%; /* Change width to a percentage for responsiveness */
+  max-width: 1010px; /* Set a max-width for larger screens */
+  margin: 0 auto; /* Center the hero section */
+}
+
+.hero-text {
+  width: 90%; /* Change width to a percentage for responsiveness */
+  max-width: 480px; /* Set a max-width for larger screens */
+  margin: 0 auto; /* Center the text */
+}
+
+.hero h1 {
+  font-weight: bold;
+  position: relative;
+  z-index: 4;
+  line-height: 1.3em;
+  text-align: center;
+  font: normal normal normal 80px/1.4em lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif;
+  font-weight: 800;
+}
+
+.hero p {
+  line-height: 1.6em;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+}
+
+.early-access-button {
+  background-color: #00d4b8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 4;
+}
+
+.early-access-button:hover {
+  background-color: #00bfa5;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%; /* Change width to a percentage for responsiveness */
+  max-width: 400px; /* Set a max-width for larger screens */
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.get-updates-button {
+  background-color: #00d4b8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.get-updates-button:hover {
+  background-color: #00bfa5;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px; /* Adjust font size for smaller screens */
+  }
+
+  .hero p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .background-gif {
+    width: 30px; /* Adjust size for smaller screens */
+    height: 30px; /* Adjust size for smaller screens */
+  }
+
+  .early-access-button {
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .modal-content {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .modal-content h2 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .modal-content p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
